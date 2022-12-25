@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>22b5eadd-446d-43b5-9228-2fb8de710067</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DbStorage1\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="Repositories\**" />
+    <Compile Remove="Services\**" />
+    <Content Remove="DbStorage1\**" />
+    <Content Remove="Models\**" />
+    <Content Remove="Repositories\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="DbStorage1\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Repositories\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="DbStorage1\**" />
+    <None Remove="Models\**" />
+    <None Remove="Repositories\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShortUrl.Interfaces\ShortUrl.Interfaces.csproj" />
+    <ProjectReference Include="..\ShortUrl.Repositories\ShortUrl.Repositories.csproj" />
+    <ProjectReference Include="..\ShortUrl.Services\ShortUrl.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>
