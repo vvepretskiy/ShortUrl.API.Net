@@ -102,4 +102,4 @@ RESPONSE 200 OK
 
 
 ## Author
-Renat Soleikin
+Vitalii Vepretskyi
